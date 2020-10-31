@@ -1,5 +1,5 @@
 .bg-img { 
-    background-image: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1349,w_2400,x_0,y_125/f_auto,q_auto,w_1100/v1576279528/shape/mentalfloss/610219-gettyimages-1125672866.jpg");
+    background-image: url("../html/rootsbackground.jpg");
     background-position: center center;
     background-repeat:  no-repeat;
     background-size:  cover;
@@ -11,3 +11,19 @@
 .create {
     z-index: 10;
 }
+
+.profileimg {
+    float: right;
+}
+
+.columns {
+    margin: 0px;
+    padding: 0px;
+}
+
+hr {
+    border: 1px solid black;
+    align-content: center;
+    width: 75%;
+}
+
