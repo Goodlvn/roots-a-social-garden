@@ -21,7 +21,7 @@
             </div>
             <div id="navbarMenuHeroC" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item is-active">
+                    <a class="navbar-item is-active" href="signup.html">
                         Home
                     </a>
                     <a class="navbar-item">
@@ -31,17 +31,22 @@
                         Products
                     </a>
                     <span class="navbar-item">
-                        <a class="button is-success is-inverted">
+                        <button class="button is-success is-inverted" id="loginBtn">
                             <span class="icon">
                                 <i class="fas fa-seedling"></i>
                             </span>
                             <span>Login</span>
-                        </a>
+                        </button>
                     </span>
                 </div>
             </div>
         </div>
     </header>
+
+   
+    
+
+
     <section class="section hero-body container background bg-img has-text-centered create">
         <div class="column is-half is-offset-one-quarter">
             <div class="notification is-Light" style="background-color: rgba(76, 127, 84, 1);">
@@ -53,7 +58,7 @@
                 </p>
                 <div class="field">
                     <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
+                        <input class="input" type="email" placeholder="Email" id="signEmail">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -61,7 +66,7 @@
                 </div>
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
+                        <input class="input" type="password" placeholder="Password" id="password1">
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -69,7 +74,7 @@
                 </div>
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Confirm Password">
+                        <input class="input" type="password" placeholder="Confirm Password" id="confirmPassword">
                         <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
@@ -79,12 +84,12 @@
                 <br>
                 <div class="field is-grouped is-grouped-centered">
                     <p class="control">
-                        <a class="button is-success is-inverted">
+                        <button class="button is-success is-inverted" id="signupBtn">
                             <span class="icon">
                                 <i class="fas fa-seedling"></i>
                             </span>
                             <span>Sign up</span>
-                        </a>
+                            </a>
                     </p>
                 </div>
             </div>
@@ -102,7 +107,8 @@
             <strong>Roots ©Copyright 2020</strong>
         </div>
     </footer>
-  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>
