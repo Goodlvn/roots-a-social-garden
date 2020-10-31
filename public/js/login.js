@@ -4,7 +4,7 @@ $("#loginNowBtn").on("click", function (event) {
     // if no email or password is specified, do not make call and let user know
     if ($("#loginEmail").val() === '') {
         $("#loginEmail").addClass("is-danger");
-    } else if 
+    } else if
         ($("#loginPassword").val() === '') {
         $("#loginPassword").addClass("is-danger");
     } else {
@@ -14,11 +14,6 @@ $("#loginNowBtn").on("click", function (event) {
 })
 
 
-// direct to home  "signup page" when user clicks on roots logo ========================
- $("#rootsBtn").on("click", function (event) {
-    event.preventDefault();
-    // redirect to next user profile page
-    window.location = "signup.html";
-})
+
 
 
