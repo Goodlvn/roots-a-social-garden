@@ -1,3 +1,5 @@
+
+
 module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define("user", {
@@ -43,6 +45,25 @@ module.exports = (sequelize, DataTypes) => {
             }
         }
     });
+
+    User.associate = (models) => {
+
+        User.hasMany(models.plant, {
+            onDelete: "cascade"
+        });
+
+        User.hasMany(models.post, {
+            onDelete: "cascade"
+        });
+
+        User.hasMany(models.like, {
+            onDelete: "cascade"
+        });
+        
+        User.hasMany(models.comment, {
+            onDelete: "cascade"
+        });
+    };
 
     return User;
 };

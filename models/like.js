@@ -8,5 +8,28 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
+    Like.associate = (models) => {
+
+        Like.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    
+        Like.belongsTo(models.post, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+
+        Like.belongsTo(models.comment, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    }
+
+   
+
     return Like;
 };

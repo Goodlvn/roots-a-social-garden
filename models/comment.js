@@ -8,5 +8,24 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
+    Comment.associate = (models) => {
+
+        Comment.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+
+        Comment.belongsTo(models.post, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+
+        Comment.hasMany(models.like, {
+            onDelete: "cascade"
+        });
+    };
+
     return Comment;
 };

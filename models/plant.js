@@ -26,5 +26,20 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
+    Plant.associate = (models) => {
+
+        Plant.belongsTo(models.user, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+
+        Plant.hasMany(models.post, {
+            onDelete: "cascade"
+        })
+    };
+
+   
+
     return Plant;
 };
