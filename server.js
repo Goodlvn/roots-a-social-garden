@@ -13,7 +13,7 @@ app.use(express.static("./public"));
 // will need one of these for every routes file that we use
 require("./routes/html-routes.js")(app);
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
     app.listen(PORT, () => {
         console.log("App listening on PORT: http://localhost:" + PORT);
     });
