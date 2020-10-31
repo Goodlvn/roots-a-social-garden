@@ -21,3 +21,9 @@
     padding: 0px;
 }
 
+hr {
+    border: 1px solid black;
+    align-content: center;
+    width: 75%;
+}
+
