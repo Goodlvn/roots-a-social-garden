@@ -1,8 +1,7 @@
  // direct to the new profile set up page when user clicks on signup button ========================
  $("#signupBtn").on("click", function (event) {
     event.preventDefault();
-   
-   
+   // check to see if both passwords match, if so redirect user to the next page ========================
     if ($("#password1").val() === $("#confirmPassword").val()) {
         var email = $("#signEmail").val();
         console.log(email);
