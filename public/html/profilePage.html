@@ -53,8 +53,7 @@
 
       <div class="column is-one-third mx-5">
         <figure class="profileimg image is-128x128">
-          <img class="is-rounded is-centered"
-            src="https://res.cloudinary.com/teepublic/image/private/s--oKNpGy8m--/c_fit,g_north_west,h_920,w_882/co_ffffff,e_outline:41/co_ffffff,e_outline:inner_fill:1/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1575341442/production/designs/7003075_0.jpg">
+          <img class="is-rounded is-centered" src="../images/jdsface.png">
         </figure>
       </div>
 
@@ -98,14 +97,14 @@
         <img class="highlightimg is-rounded is-centered image is-64x64"
           src="https://vignette.wikia.nocookie.net/biggest/images/c/cd/Greenz12.jpg/revision/latest?cb=20160213170858">
       </figure>
-<!-- button to create new highlight -->
-<a class>
-      <figure class="image is-64x64 mx-3">
-        <img class="highlightimg is-rounded is-centered image is-64x64"
-          src="../images/plussign.jpg" id="addNewHighlight">
+      <!-- button to create new highlight -->
+      <a class>
+        <figure class="image is-64x64 mx-3">
+          <img class="highlightimg is-rounded is-centered image is-64x64" src="../images/plussign.jpg"
+            id="addNewHighlight">
       </a>
       </figure>
-    </a>
+      </a>
 
 
     </div>
@@ -121,9 +120,9 @@
   </section>
   <!-- </section> -->
 
-<!-- plant post modal -->
+  <!-- plant post modal -->
   <div class="modal" id="plantPostModal">
-    <div class="modal-background" ></div>
+    <div class="modal-background"></div>
     <div class="modal-content">
       <div class="card">
         <div class="card-image">
@@ -147,7 +146,6 @@
             <strong>
               <h4>Create your post below and upload an image!</h4>
             </strong>
-            <br>
             <p id="currentDay"></p>
           </div>
           <div class="control">
@@ -180,13 +178,12 @@
         </div>
       </div>
     </div>
-  </div>
-  <button class="modal-close is-large" aria-label="close" id="close"></button>
+    <button class="modal-close is-large" aria-label="close" id="close"></button>
   </div>
 
   <!-- modal for creating new highlight -->
   <div class="modal" id="newHighlightModal">
-    <div class="modal-background" ></div>
+    <div class="modal-background"></div>
     <div class="modal-content">
       <div class="card">
         <div class="card-image">
@@ -225,40 +222,41 @@
           <br>
           <div class="field">
             <div class="control">Plant Bio:
-              <input class="input is-small" type="text" placeholder="e.g Fernando the Fern is my favorite plant baby. He loves water & sun...">
+              <input class="input is-small" type="text"
+                placeholder="e.g Fernando the Fern is my favorite plant baby. He loves water & sun...">
             </div>
           </div>
           <br>
-        <div class="file has-name is-boxed is-centered">
-          <label class="file-label">
-            <input class="file-input" type="file" name="resume">
-            <span class="file-cta">
-              <span class="file-icon">
-                <i class="fas fa-upload"></i>
+          <div class="file has-name is-boxed is-centered">
+            <label class="file-label">
+              <input class="file-input" type="file" name="resume">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Choose a file…
+                </span>
               </span>
-              <span class="file-label">
-                Choose a file…
+              <span class="file-name" style="color:black">
+                Upload Your Plant Image
               </span>
-            </span>
-            <span class="file-name" style="color:black">
-              Upload Your Plant Image
-            </span>
-          </label>
-        </div>
-        <br>
-        <div class="field is-grouped is-grouped-centered">
-          <p class="control">
-            <a class="button is-primary">
-              Add New Highlight!
-            </a>
-          </p>
+            </label>
+          </div>
+          <br>
+          <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <a class="button is-primary">
+                Add New Highlight!
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    <button class="modal-close is-large" aria-label="close" id="close"></button>
   </div>
-  <button class="modal-close is-large" aria-label="close" id="close"></button>
-  </div>
-<!-- Footer -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
       <i class="fas fa-seedling"></i>
