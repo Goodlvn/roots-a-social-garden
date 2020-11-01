@@ -38,3 +38,9 @@ hr {
 .customHide {
     display: none;
 }
+
+.gardenContainer {
+    width: 100%;
+    min-height: 250px;
+
+}
