@@ -31,8 +31,16 @@ hr {
     border: 1px solid black;
 }
 
+.customShow {
+    display: block;
+}
+
+.customHide {
+    display: none;
+}
+
 .gardenContainer {
     width: 100%;
     min-height: 250px;
-    background-color: green;
+
 }
