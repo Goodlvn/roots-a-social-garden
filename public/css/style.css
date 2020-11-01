@@ -30,3 +30,11 @@ hr {
 .highlightimg {
     border: 1px solid black;
 }
+
+.customShow {
+    display: block;
+}
+
+.customHide {
+    display: none;
+}
