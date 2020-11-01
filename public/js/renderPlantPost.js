@@ -1,9 +1,11 @@
 
-$("#garden").on("click", (event) => {
+$("#plant").on("click", (event) => {
    renderPost();
 });
 
 function renderPost() {
+    let box = $("<div>");
+    box.attr("class", "box");
     let container = $("<article>");
     container.attr("class", "media");
     let figure = $("<figure>");
@@ -17,20 +19,23 @@ function renderPost() {
     content.attr("class", "media-content");
     let postContent = $("<div>");
     postContent.attr("class", "content");
-    postContent.text("Week 1");
+    // postContent.text("Week 1");
 
     let userInfo = $("<p>");
     let userName = $("<strong>");
     userName.text("John Smith");
     let userHandle = $("<small>");
-    userHandle.text("@johnsmith")
+    userHandle.text("@johnsmith");
+    let userText = $("<p>");
+    userText.text("Week 1")
     let br = $("<br>");
 
 
 // container.append(figure));
 // figure.append(imgCont.append(img)), content.append(postContent.append(post, strong, small, small, br)
 //create new frow for colmun to append to
-$('#plantPost').append(container);
+$('#plantPost').append(box);
+box.append(container);
 container.append(figure);
 figure.append(imgCont);
 imgCont.append(img);
@@ -38,7 +43,7 @@ container.append(userInfo)
 userInfo.append(userName);
 userInfo.append(userHandle);
 container.append(content);
-content.append(postContent);
+content.append(br, userText);
 }
 
 
