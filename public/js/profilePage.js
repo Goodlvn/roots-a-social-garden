@@ -17,3 +17,16 @@ $("#plantPostModal").on("click", "#close", function () {
     $("#plantPostModal").removeClass("is-active");  
  })
 
+// direct to new highlight modal when user clicks on + button ========================
+$("#addNewHighlight").on("click", function () {
+    $("#newHighlightModal").addClass("is-active");
+     
+ })
+
+ $("#newHighlightModal").on("click", "#close", function () {
+    $("#newHighlightModal").removeClass("is-active");  
+ })
+
+ $("#newHighlightModal").on("click", ".modal-background", function () {
+    $("#newHighlightModal").removeClass("is-active");  
+ })
