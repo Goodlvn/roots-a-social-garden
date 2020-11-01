@@ -3,40 +3,40 @@
 
 $(document).ready(() => {
 
-    let emailInput = $("#signEmail");
-    let passwordInput = $("#password");
+    let username = $("#username");
+    let password = $("#password");
     let confirmPassword = $("#confirmPassword");
   
     $("#signupBtn").on("click", (event) => {
         event.preventDefault();
         // check to see if both passwords match, if so redirect user to the next page ========================
-        if (passwordInput.val() === confirmPassword.val()) {
+        if (password.val().trim() === confirmPassword.val().trim()) {
   
             let userData = {
-                email: emailInput.val().trim(),
-                password: passwordInput.val().trim()
+                username: username.val().trim(),
+                password: password.val().trim()
             };
   
-            if(!userData.email || !userData.password) {
+            if(!userData.username || !userData.password) {
                 return;
             }
   
-            signUpUser(userData.email, userData.password);
-            emailInput.val("");
-            passwordInput.val("");
+            signUpUser(userData.username, userData.password);
+            username.val("");
+            password.val("");
             confirmPassword.val("");
   
         } else {
-            emailInput.val("");
-            passwordInput.val("");
+            username.val("");
+            password.val("");
             confirmPassword.val("");
             alert("Passwords don't match. Please try again.");
         };
     });
   
-    function signUpUser(email, password) {
+    function signUpUser(username, password) {
         $.post("/api/signup", {
-            email: email,
+            username: username,
             password: password
         })
         .then((data) => {

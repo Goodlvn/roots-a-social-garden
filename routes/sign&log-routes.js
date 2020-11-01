@@ -13,7 +13,7 @@ module.exports = (app) => {
 
     app.post("/api/signup", (req, res) => {
         db.user.create({
-            email: req.body.email,
+            username: req.body.username,
             password: req.body.password
         })
         .then(() => {
