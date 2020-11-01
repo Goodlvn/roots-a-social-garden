@@ -30,3 +30,9 @@ hr {
 .highlightimg {
     border: 1px solid black;
 }
+
+.gardenContainer {
+    width: 100%;
+    min-height: 250px;
+    background-color: green;
+}
