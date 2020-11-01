@@ -27,7 +27,18 @@ function renderPost() {
     let br = $("<br>");
 
 
-
+// container.append(figure));
+// figure.append(imgCont.append(img)), content.append(postContent.append(post, strong, small, small, br)
+//create new frow for colmun to append to
+$('#plantPost').append(container);
+container.append(figure);
+figure.append(imgCont);
+imgCont.append(img);
+container.append(userInfo)
+userInfo.append(userName);
+userInfo.append(userHandle);
+container.append(content);
+content.append(postContent);
 }
 
 
