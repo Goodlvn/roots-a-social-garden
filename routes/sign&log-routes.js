@@ -2,7 +2,8 @@
 const path = require("path");
 const db = require("../models");
 const passport = require("../config/passport");
-const isAuthenticated = require("../config/middleware/isAuthenticated")
+const isAuthenticated = require("../config/middleware/isAuthenticated");
+const isProfileConfirmed = require("../config/middleware/isProfileConfirmed");
 
 module.exports = (app) => {
 
@@ -40,7 +41,7 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, "../public/html/login.html"));
     });
 
-    app.get("/members", isAuthenticated, (req, res) => {
+    app.get("/members", isAuthenticated, isProfileConfirmed, (req, res) => {
         res.sendFile(path.join(__dirname, "../public/html/profilePage.html"));
     });
 };
