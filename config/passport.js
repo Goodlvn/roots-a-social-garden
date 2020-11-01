@@ -9,7 +9,7 @@ passport.use(new LocalStrategy(
     },
     (email,password, done) => {
 
-        db.User.findOne({
+        db.user.findOne({
             where: {
                 email: email
             }

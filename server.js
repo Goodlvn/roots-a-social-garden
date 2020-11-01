@@ -16,7 +16,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // will need one of these for every routes file that we use
-require("./routes/html-routes.js")(app);
+require("./routes/sign&log-routes.js")(app);
 
 db.sequelize.sync(({ force: true })).then(() => {
     app.listen(PORT, () => {
