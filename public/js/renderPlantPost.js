@@ -1,5 +1,5 @@
 
-$("#garden").on("click", (event) => {
+$("#plant").on("click", (event) => {
    renderPost();
 });
 
