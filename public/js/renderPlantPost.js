@@ -17,13 +17,15 @@ function renderPost() {
     content.attr("class", "media-content");
     let postContent = $("<div>");
     postContent.attr("class", "content");
-    postContent.text("Week 1");
+    // postContent.text("Week 1");
 
     let userInfo = $("<p>");
     let userName = $("<strong>");
     userName.text("John Smith");
     let userHandle = $("<small>");
-    userHandle.text("@johnsmith")
+    userHandle.text("@johnsmith");
+    let userText = $("<p>");
+    userText.text("Week 1")
     let br = $("<br>");
 
 
@@ -38,7 +40,7 @@ container.append(userInfo)
 userInfo.append(userName);
 userInfo.append(userHandle);
 container.append(content);
-content.append(postContent);
+content.append(br, userText);
 }
 
 
