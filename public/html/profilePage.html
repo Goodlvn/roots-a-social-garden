@@ -12,12 +12,15 @@
 </head>
 
 <body>
-  <header class="navbar">
+  <header class="navbar" style="color: black;">
     <div class="container">
       <div class="navbar-brand">
         <a href="/members">
           <img src="../images/rootslogo_200x200.png" width="100px" height="100px" alt="Logo" class="center"></a>
         <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+          <span></span>
+          <span></span>
+          <span></span>
         </span>
       </div>
       <div id="navbarMenuHeroC" class="navbar-menu">
@@ -115,9 +118,13 @@
       <hr>
 
     </div>
-    <p class="has-text-centered customShow" id="garden">Garden</p></a>
-    <p class="has-text-centered customShow" id="plant">Plant Post</p></a>
 
+    <button class="button is-success" id="createBtn">
+      <span class="icon">
+        <i class="fas fa-seedling"></i>
+      </span>
+      <span>Create a Post</span>
+    </button>
 
     <div class="gardenContainer columns is-multiline">
     </div>
@@ -130,6 +137,25 @@
 
   </section>
   <!-- </section> -->
+
+  <!-- garden plant modal -->
+
+  <div class="modal" id="createModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Where would you like to post?</p>
+        <button class="delete" id="close"></button>
+      </header>
+      <section class="modal-card-body">
+        Please choose below
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="garden">Garden Post</button>
+        <button class="button" id="plant">Plant Post</button>
+      </footer>
+    </div>
+  </div>
 
   <!-- plant post modal -->
   <div class="modal" id="plantPostModal">
