@@ -1,5 +1,6 @@
 $("#garden").on("click", (event) => {
     renderGarden();
+    $("#createModal").removeClass("is-active"); 
  });
  
  function renderGarden() {
