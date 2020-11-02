@@ -12,84 +12,89 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <a href="signup.html">
-                <img src="../images/rootslogo_200x200.png" width="100px" height="100px" alt="Logo" class="center"></a>
-                <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-                </span>
-            </div>
-            <div id="navbarMenuHeroC" class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item is-active" href="signup.html">
-                        Home
-                    </a>
-                    <a class="navbar-item">
-                        Plant Finder
-                    </a>
-                    <a class="navbar-item">
-                        Products
-                    </a>
-                    <span class="navbar-item">
-                        <button class="button is-success is-inverted" id="loginBtn">
-                            <span class="icon">
-                                <i class="fas fa-seedling"></i>
-                            </span>
-                            <span>Login</span>
-                        </button>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="section hero-body container background bg-img has-text-centered create">
-        <div class="column is-half is-offset-one-quarter">
-            <div class="notification is-Light" style="background-color: rgba(76, 127, 84, 1);">
-                <h1 class="title has-text-centered" style="color: white;">
-                    Sign up here!
-                </h1>
-                <p class="subtitle has-text-centered" style="color: white;">
-                    Please input your info below:
-                </p>
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email" id="signEmail">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
+    <section class="hero is-light is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a href="signup.html">
+                            <img src="../images/rootslogo_200x200.png" width="100px" height="100px" alt="Logo"
+                                class="center"></a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroC">
                         </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password" id="password">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Confirm Password" id="confirmPassword">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
-                <br>
-                <br>
-                <div class="field is-grouped is-grouped-centered">
-                    <p class="control">
-                        <button class="button is-success is-inverted" id="signupBtn">
-                            <span class="icon">
-                                <i class="fas fa-seedling"></i>
-                            </span>
-                            <span>Sign up</span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active" href="signup.html">
+                                Home
                             </a>
-                    </p>
+                            <a class="navbar-item">
+                                Plant Finder
+                            </a>
+                            <a class="navbar-item">
+                                Products
+                            </a>
+                            <span class="navbar-item">
+                                <button class="button is-success is-inverted" id="loginBtn">
+                                    <span class="icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </span>
+                                    <span>Login</span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </header>
+            <section class="section hero-body container background bg-img has-text-centered create">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="notification is-Light" style="background-color: rgba(76, 127, 84, 1);">
+                        <h1 class="title has-text-centered" style="color: white;">
+                            Sign up here!
+                        </h1>
+                        <p class="subtitle has-text-centered" style="color: white;">
+                            Please input your info below:
+                        </p>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email" id="signEmail">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Password" id="password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="password" placeholder="Confirm Password"
+                                    id="confirmPassword">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="field is-grouped is-grouped-centered">
+                            <p class="control">
+                                <button class="button is-success is-inverted" id="signupBtn">
+                                    <span class="icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </span>
+                                    <span>Sign up</span>
+                                    </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
     <h2 class="subtitle has-text-centered m-5">
@@ -97,6 +102,7 @@
         take
         care of you.
     </h2>
+</section>
     <footer class="footer">
         <div class="content has-text-centered">
             <i class="fas fa-seedling"></i>

@@ -1,6 +1,19 @@
+// direct to plant post when user clicks on plant button inside modal ========================
+$("#createBtn").on("click", function () {
+    $("#createModal").addClass("is-active");    
+ })
+
+ $("#createModal").on("click", "#close", function () {
+    $("#createModal").removeClass("is-active");  
+ })
+
+ $("#createModal").on("click", ".modal-background", function () {
+    $("#createModal").removeClass("is-active");  
+ })
 
 $("#plant").on("click", (event) => {
    renderPost();
+   $("#createModal").removeClass("is-active");   
 });
 
 function renderPost() {

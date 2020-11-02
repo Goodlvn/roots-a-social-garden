@@ -1,5 +1,3 @@
-DROP DATABASE roots_DB; 
-
 CREATE DATABASE roots_DB;
 
 USE roots_DB;
