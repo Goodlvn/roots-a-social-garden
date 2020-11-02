@@ -31,12 +31,12 @@ hr {
     border: 1px solid black;
 }
 
-.customShow {
+.show {
     display: block;
 }
 
-.customHide {
-    display: none;
+.hide {
+    display: none !important;
 }
 
 .gardenContainer {
@@ -57,6 +57,34 @@ hr {
       max-width: 425px;
   }
 
+  .full {
+      position: relative;
+      min-width: 100%;
+  }
+
+  #mainContainer {
+      margin: 0 auto;
+      width: 75%;
+  }
+
+  .block {
+      display: block;
+  }
+
+  .comment {
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    right: 13px;
+  }
+
+  #commentTag {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+  }
+  
   #mission {
       font-family: 'Abel', sans-serif;
       font-family: 'Kanit', sans-serif;

@@ -1,6 +1,6 @@
 const express = require("express");
 const session = require("express-session");
-const passport = require ("./config/passport");
+const passport = require("./config/passport");
 
 
 const PORT = process.env.PORT || 8080;
@@ -19,7 +19,7 @@ app.use(passport.session());
 require("./routes/sign&log-routes.js")(app);
 require("./routes/user-routes.js")(app);
 
-db.sequelize.sync().then(() => {
+db.sequelize.sync(({ force:true })).then(() => {
     app.listen(PORT, () => {
         console.log("App listening on PORT: http://localhost:" + PORT);
     });
