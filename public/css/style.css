@@ -52,3 +52,7 @@ hr {
     width: 50%;
     
   }
+
+  .bio {
+      max-width: 425px;
+  }

@@ -33,6 +33,12 @@ $("#addNewHighlight").on("click", function () {
 
  $(document).ready(function() {
 
+   $.get("/api/user_data", (data) => {
+      $("#handle").text("@" + data.username);
+      $("#fullName").text(data.first_name + " " + data.last_name);
+      $("#bio").text(data.bio);
+   });
+
    // Check for click events on the navbar burger icon
    $(".navbar-burger").click(function() {
  
