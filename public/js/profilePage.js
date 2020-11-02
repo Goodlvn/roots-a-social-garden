@@ -6,7 +6,8 @@ $(document).ready(function () {
 // direct to modal when user clicks on plant post button ========================
 $("#plantPostBtn").on("click", function () {
    $("#plantPostModal").addClass("is-active");
-    
+   $("#postBody").val("");
+
 })
 
 $("#plantPostModal").on("click", "#close", function () {
