@@ -45,7 +45,7 @@ hr {
 
 }
 
-.button {
+#createBtn {
     display: block;
     margin-left: auto;
     margin-right: auto;
