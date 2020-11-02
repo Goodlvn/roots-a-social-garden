@@ -40,7 +40,7 @@ $(document).ready(() => {
           })
             .then((data) => {
                 
-                window.location.replace("/members");
+                window.location.replace("/login");
             })
             .catch(handleLoginErr);
 

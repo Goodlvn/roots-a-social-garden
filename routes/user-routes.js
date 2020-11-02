@@ -4,7 +4,8 @@ const db = require("../models");
 module.exports = (app) => {
 
     app.get("/logout", (req, res) => {
-        if (req.user.bio === null) {
+
+        if(req.user.bio === null){
             req.logout();
             res.redirect("/login");
         } else {
