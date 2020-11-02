@@ -15,7 +15,7 @@
   <header class="navbar" style="color: black;">
     <div class="container">
       <div class="navbar-brand">
-        <a href="signup.html">
+        <a href="/members">
           <img src="../images/rootslogo_200x200.png" width="100px" height="100px" alt="Logo" class="center"></a>
         <span class="navbar-burger burger" data-target="navbarMenuHeroC">
           <span></span>
@@ -23,12 +23,30 @@
           <span></span>
         </span>
       </div>
+
+   <!-- Profile search on nav bar (Need to update search button) -->
+          <div class="field has-addons mt-4 ml-5">
+          <div class="control has-icons-left mt-4">
+            <input class="input" type="text" placeholder="Find a friend"></i>
+            <span class="icon is-small is-left">
+              <i class="far fa-user"></i>
+            </span>
+          </div>
+          <a class="button is-success is-inverted mt-4" id="searchBtn">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+            <span>Search</span>
+          </a>
+      </div>
+  
+
       <div id="navbarMenuHeroC" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item is-active" href="signup.html">
             Home
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item" id="plantFinder">
             Plant Finder
           </a>
           <span class="navbar-item">

@@ -15,8 +15,8 @@
   <header class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a href="signup.html">
-          <img src="../images/rootslogo_200x200.png" width="100px" height="100px" alt="Logo" class="center"></a>
+        <a href="/members">
+        <img src="../images/rootslogo_200x200.png" width="100px" height="100px" alt="Logo" class="center"></a>
         <span class="navbar-burger burger" data-target="navbarMenuHeroC">
           <span></span>
           <span></span>
@@ -35,11 +35,11 @@
             Products
           </a>
           <span class="navbar-item">
-            <a class="button is-success is-inverted">
+            <a class="button is-success is-inverted" href="/logout">
               <span class="icon">
                 <i class="fas fa-seedling"></i>
               </span>
-              <span>Login</span>
+              <span>Sign Out</span>
             </a>
           </span>
         </div>
@@ -61,33 +61,25 @@
         </p>
 
         <div class="field">
-          <label class="label has-text-left" style="color: white;">Username</label>
-          <div class="control">
-            <input class="input is-rounded is-small" type="text" placeholder="e.g. green_thumbs_up">
-          </div>
-        </div>
-
-        <div class="field">
           <label class="label has-text-left" style="color: white;">First Name</label>
           <div class="control">
-            <input class="input is-rounded is-small" type="text" placeholder="e.g. Jane">
+            <input class="input is-rounded is-small" type="text" placeholder="e.g. Jane" id="firstName">
           </div>
         </div>
 
         <div class="field">
           <label class="label has-text-left" style="color: white;">Last Name</label>
           <div class="control">
-            <input class="input is-rounded is-small" type="text" placeholder="e.g. Doe">
+            <input class="input is-rounded is-small" type="text" placeholder="e.g. Doe" id="lastName">
           </div>
         </div>
 
         <div class="field">
           <label class="label has-text-left" style="color: white;">Bio - Tell us about yourself!</label>
           <div class="control">
-            <textarea class="textarea is-small"
-              placeholder="e.g. Long time plant lover living my seedful dreams"></textarea>
+            <textarea class="textarea is-medium"
+              placeholder="e.g. Long time plant lover living my seedful dreams" id="bio"></textarea>
             <br>
-
           </div>
         </div>
 
@@ -111,11 +103,12 @@
         <br>
         <div class="field is-grouped is-grouped-centered">
           <p class="control">
-            <a class="button is-primary">
+            <a class="button is-primary" id="confirmProfile" href="/logout">
               Create!
             </a>
           </p>
         </div>
+        <p style="color: white;">Please Login in again when done</p>
       </div>
     </div>
 
@@ -136,7 +129,7 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="../js/profileSetup.js"></script>
+  <script src="../js/profileConfirm.js"></script>
 
 </body>
 

@@ -1,39 +1,39 @@
 // direct to user profile page when user clicks login now button
 $(document).ready(() => {
 
-    var emailInput = $("#loginEmail");
-    var passwordInput = $("#loginPassword");
+    var username = $("#username");
+    var password = $("#password");
 
     $("#loginNowBtn").on("click", function (event) {
 
         event.preventDefault();
         // if no email or password is specified, do not make call and let user know
-        if ($("#loginEmail").val() === '') {
-            $("#loginEmail").addClass("is-danger");
+        if ($("#username").val() === '') {
+            $("#username").addClass("is-danger");
         } else if
-            ($("#loginPassword").val() === '') {
-            $("#loginPassword").addClass("is-danger");
+            ($("#password").val() === '') {
+            $("#password").addClass("is-danger");
         } else {
 
             let userData = {
-                email: emailInput.val().trim(),
-                password: passwordInput.val().trim()
+                username: username.val().trim(),
+                password: password.val().trim()
             };
 
-            if (!userData.email || !userData.password) {
+            if (!userData.username || !userData.password) {
                 return;
             }
 
-            logInUser(userData.email, userData.password);
-            emailInput.val("");
+            logInUser(userData.username, userData.password);
+            username.val("");
             password.val("");
         };
 
     });
 
-    function logInUser(email, password) {
+    function logInUser(username, password) {
         $.post("/api/login", {
-            email: email,
+            username: username,
             password: password
         })
             .then(() => {
