@@ -21,6 +21,7 @@ $("#plantPostModal").on("click", "#close", function () {
 // direct to new highlight modal when user clicks on + button ========================
 $("#addNewHighlight").on("click", function () {
     $("#newHighlightModal").addClass("is-active");
+    alert("test");
      
  })
 
@@ -33,8 +34,6 @@ $("#addNewHighlight").on("click", function () {
  })
 
  $("#mainContainer").on("click", ".showCom", (event) => {
-   //  console.log(event.target.parentElement.parentNode.childNodes[1]);
-
     let comments = event.target.parentElement.parentNode.childNodes[1];
     comments.classList.toggle("hide");
  })
