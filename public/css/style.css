@@ -56,3 +56,8 @@ hr {
   .bio {
       max-width: 425px;
   }
+
+  #mission {
+      font-family: 'Abel', sans-serif;
+      font-family: 'Kanit', sans-serif;
+  }
