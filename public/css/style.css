@@ -72,15 +72,15 @@ hr {
   }
 
   .comment {
-     cursor: pointer;
-      position: absolute;
-      right: 15px;
-      top: 55px;
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    right: 13px;
   }
 
   #commentTag {
-    cursor: pointer;
+    display: block;
     position: absolute;
-    right: 30px;
-    top: 50px;
-}
+    bottom: 0;
+    right: 25px;
+  }
