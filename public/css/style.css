@@ -84,3 +84,8 @@ hr {
     bottom: 0;
     right: 25px;
   }
+  
+  #mission {
+      font-family: 'Abel', sans-serif;
+      font-family: 'Kanit', sans-serif;
+  }

@@ -36,11 +36,13 @@ $("#addNewHighlight").on("click", function () {
 
     let comments = event.target.parentElement.parentNode.childNodes[1];
     comments.classList.toggle("hide");
-
-
-
-
  })
+
+ $("#getStartedCloseBtn").on("click", (data) => {
+
+   $("#getStarted").addClass("hide");
+
+ });
 
  $(document).ready(function() {
 
