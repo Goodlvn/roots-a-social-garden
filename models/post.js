@@ -3,10 +3,10 @@ module.exports = (sequelize, DataTypes) => {
     const Post = sequelize.define("post", {
         body: {
             type: DataTypes.STRING,
-            allowNull: false, 
-            validate: {
-                len: [1]
-            }
+            allowNull: false
+            // validate: {
+            //     len: [1]
+            // }
         }
     });  
 
