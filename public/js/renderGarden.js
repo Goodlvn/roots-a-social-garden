@@ -13,6 +13,4 @@ $("#garden").on("click", (event) => {
     $('.gardenContainer').append(card);
     card.append(img);
 
-
-
  }

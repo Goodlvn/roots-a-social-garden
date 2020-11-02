@@ -126,65 +126,22 @@
       </a>
       </figure>
       </a>
-
-
     </div>
-
-
     </div>
     <div class="columns hero-body is-centered is-half is-offset-one-quarer is-mobile">
       <hr>
-
     </div>
-
-    <button class="button is-success" id="createBtn">
-      <span class="icon">
-        <i class="fas fa-seedling"></i>
-      </span>
-      <span>Create a Post</span>
-    </button>
-
     <div class="gardenContainer columns is-multiline">
     </div>
-
-
-
     <!-- <p class="has-text-centered">Plant Post</p> -->
     <div id="plantPost" class="mt-3"></div>
-
-
   </section>
   <!-- </section> -->
-
-  <!-- garden plant modal -->
-
-  <div class="modal" id="createModal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Where would you like to post?</p>
-        <button class="delete" id="close"></button>
-      </header>
-      <section class="modal-card-body">
-        Please choose below
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success" id="garden">Garden Post</button>
-        <button class="button" id="plant">Plant Post</button>
-      </footer>
-    </div>
-  </div>
-
   <!-- plant post modal -->
   <div class="modal" id="plantPostModal">
     <div class="modal-background"></div>
     <div class="modal-content">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-2by2">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
-        </div>
         <div class="card-content">
           <div class="media">
             <div class="media-left">
@@ -199,31 +156,20 @@
           </div>
           <div class="content">
             <strong>
-              <h4>Create your post below and upload an image!</h4>
+              <h4>Create your post below!</h4>
             </strong>
             <p id="currentDay"></p>
           </div>
-          <div class="control">
-            <textarea class="textarea is-small" placeholder="e.g. Tell us about your amazing plant!"></textarea>
+          <div class="field">
+            <div class="control">Title
+              <input class="input is-small" type="text" placeholder="e.g My first plant">
+            </div>
+          </div>
+          <br>
+          <div class="control">Tell us about your amazing plant!
+            <textarea class="textarea is-small" placeholder="e.g. My fern has been flourishing these past few weeks!"></textarea>
           </div>
         </div>
-        <div class="file has-name is-boxed is-centered">
-          <label class="file-label">
-            <input class="file-input" type="file" name="resume">
-            <span class="file-cta">
-              <span class="file-icon">
-                <i class="fas fa-upload"></i>
-              </span>
-              <span class="file-label">
-                Choose a file…
-              </span>
-            </span>
-            <span class="file-name" style="color:black">
-              Upload Your Plant Image
-            </span>
-          </label>
-        </div>
-        <br>
         <div class="field is-grouped is-grouped-centered">
           <p class="control">
             <a class="button is-primary">
@@ -241,11 +187,6 @@
     <div class="modal-background"></div>
     <div class="modal-content">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-2by2">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
-        </div>
         <div class="card-content">
           <div class="media">
             <div class="media-left">
@@ -280,23 +221,6 @@
               <input class="input is-small" type="text"
                 placeholder="e.g Fernando the Fern is my favorite plant baby. He loves water & sun...">
             </div>
-          </div>
-          <br>
-          <div class="file has-name is-boxed is-centered">
-            <label class="file-label">
-              <input class="file-input" type="file" name="resume">
-              <span class="file-cta">
-                <span class="file-icon">
-                  <i class="fas fa-upload"></i>
-                </span>
-                <span class="file-label">
-                  Choose a file…
-                </span>
-              </span>
-              <span class="file-name" style="color:black">
-                Upload Your Plant Image
-              </span>
-            </label>
           </div>
           <br>
           <div class="field is-grouped is-grouped-centered">
