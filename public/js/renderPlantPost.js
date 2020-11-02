@@ -7,7 +7,6 @@ $(document).ready(() => {
         let postBody = $("#postBody").val().trim();
 
 
-
         $.post("/api/post", {
             body: postBody,
         })
@@ -34,18 +33,15 @@ $(document).ready(() => {
 
             $.get("/posts", (data) => {
 
-                console.log(data);
-
-
 
                 for(i = data.length - 1; i >= 0; i--) {
 
                     let postNcom = $("<div>");
-                    postNcom.attr("class", "full m-4")
+                    postNcom.attr("class", "full")
 
 
                     let postContainer = $("<article>");
-                    postContainer.attr("class", "media full");
+                    postContainer.attr("class", "media full p-4");
                     let profileImg = $("<figure>");
                     profileImg.attr("class", "media-left");
                     let imgCont = $("<p>");
@@ -84,14 +80,9 @@ $(document).ready(() => {
                     content.prepend(userHandle);
                     content.prepend(userName);
 
-                    
-
-
-
-
 
                     let comContainer = $("<article>");
-                    comContainer.attr("class", "media full mt-6 hide");
+                    comContainer.attr("class", "media full mt-6 pb-4 hide");
                     let profileImgCom = $("<figure>");
                     profileImgCom.attr("class", "media-left");
                     let imgContCom = $("<p>");
@@ -152,7 +143,7 @@ $(document).ready(() => {
 
 
                     let line = $("<hr>");
-                    line.attr("class", "full")
+                    line.attr("class", "full m-0")
 
 
                     postContainer.append(commentIcon);

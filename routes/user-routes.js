@@ -58,6 +58,7 @@ module.exports = (app) => {
             userId: req.user.id
         })
         .then((data) => {
+            console.log("TEST");
             res.json(data)
         });
       });
