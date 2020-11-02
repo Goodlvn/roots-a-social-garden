@@ -21,7 +21,7 @@ $("#plantPostModal").on("click", "#close", function () {
 // direct to new highlight modal when user clicks on + button ========================
 $("#addNewHighlight").on("click", function () {
     $("#newHighlightModal").addClass("is-active");
-   //  alert("test");
+    $("#postBody").val("");
      
  })
 
