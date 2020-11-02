@@ -5,19 +5,19 @@ const db = require("../models");
 
 passport.use(new LocalStrategy(
     {
-        usernameField: "email"
+        usernameField: "username"
     },
-    (email,password, done) => {
+    (username,password, done) => {
 
         db.user.findOne({
             where: {
-                email: email
+                username: username
             }
         }).then(dbUser => {
 
             if (!dbUser) {
                 return done(null, false, {
-                    message: "Incorrect email."
+                    message: "Incorrect username."
                 });
             } else if (!dbUser.validPassword(password)) {
                 return done(null, false, {
