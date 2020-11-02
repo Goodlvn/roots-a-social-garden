@@ -3,6 +3,7 @@ $(document).ready(() => {
     renderPost();
 
     $("#postBtn").on("click", event => {
+        
         event.preventDefault();
         let postBody = $("#postBody").val().trim();
 
@@ -11,11 +12,12 @@ $(document).ready(() => {
             body: postBody,
         })
             .then(data => {
+                
                 renderPost();
+                
             })
 
         $("#plantPostModal").removeClass("is-active");
-
     });
 
 
@@ -45,7 +47,7 @@ $(document).ready(() => {
                     let imgCont = $("<p>");
                     imgCont.attr("class", "image is-64x64");
                     let img = $("<img>");
-                    img.attr("src", "../images/jdsface.png");
+                    img.attr("src", "../images/profilePlant.jpg");
 
                     let postContent = $("<div>");
                     postContent.attr("class", "media-content");
@@ -84,7 +86,7 @@ $(document).ready(() => {
                     let imgContCom = $("<p>");
                     imgContCom.attr("class", "image is-64x64");
                     let imgCom = $("<img>");
-                    imgCom.attr("src", "../images/jdsface.png");
+                    imgCom.attr("src", "../images/profilePlant.jpg");
 
                     let comContent = $("<div>");
                     comContent.attr("class", "media-content");
