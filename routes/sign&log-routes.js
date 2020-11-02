@@ -22,16 +22,16 @@ module.exports = (app) => {
         .catch((err) => {
             res.status(401).json(err)
         });
-     
-
     });
 
     app.get("/", (req, res) => {
         
         if(req.user) {
-            res.redirect("/members");
+                res.redirect("/members");
         }
-        res.sendFile(path.join(__dirname, "../public/html/signup.html"))
+
+        res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+
     });
 
     app.get("/login", (req,res) => {
@@ -42,6 +42,10 @@ module.exports = (app) => {
     });
 
     app.get("/members", isAuthenticated, isProfileConfirmed, (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/html/profilePage.html"));
+
+            res.sendFile(path.join(__dirname, "../public/html/profilePage.html"));
+            
     });
+
+    
 };

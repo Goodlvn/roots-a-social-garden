@@ -1,8 +1,8 @@
 module.exports = function(req, res, next) {
-    if(req.first_name !== null || req.first_name !== "") {
-        // return next();
-    }
+    if (req.user.first_name === null) {
 
-    console.log("is not completed");
-    return res.redirect("/createprofile");
+        return res.redirect("/createprofile");
+
+    }
+    return next();
 };
