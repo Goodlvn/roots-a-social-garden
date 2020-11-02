@@ -79,14 +79,12 @@
       </div>
 
       <div class="column">
-        <h1 class="username">
-          <strong id="handle">@Goodlvn</strong>
+        <h1>
+          <strong class="handle"></strong>
         </h1>
-        <h5 class="fullName" id="fullName">
-          Jonathan David Martinez
-        </h5>
+        <h5 class="fullName"></h5>
         <br>
-        <p class="bio" id="bio">Hey! Proud Plant Papa here, check out my plant babies.</p>
+        <p class="bio">Hey! Proud Plant Papa here, check out my plant babies.</p>
       </div>
     </div>
 
@@ -129,34 +127,12 @@
     <div class="columns hero-body is-centered is-half is-offset-one-quarer is-mobile">
       <hr>
     </div>
-    <div class="gardenContainer columns is-multiline">
+    <div id= "mainContainer" class="gardenContainer columns is-multiline">
     </div>
     <!-- <p class="has-text-centered">Plant Post</p> -->
     <div id="plantPost" class="mt-3"></div>
   </section>
   <!-- </section> -->
-<<<<<<< HEAD
-
-  <!-- garden plant modal -->
-  <div class="modal" id="createModal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Where would you like to post?</p>
-        <button class="delete" id="close"></button>
-      </header>
-      <section class="modal-card-body">
-        Please choose below
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success" id="garden">Garden Post</button>
-        <button class="button" id="plant">Plant Post</button>
-      </footer>
-    </div>
-  </div>
-
-=======
->>>>>>> 45a863442320f790374a3082b7b6fd3fee31b018
   <!-- plant post modal -->
   <div class="modal" id="plantPostModal">
     <div class="modal-background"></div>
@@ -170,8 +146,8 @@
               </figure>
             </div>
             <div class="media-content">
-              <p class="title is-4">Johnathan David Martinez</p>
-              <p class="subtitle is-6">@Goodlvn</p>
+              <p class="title is-4 fullName"></p>
+              <p class="subtitle is-6 handle">@Goodlvn</p>
             </div>
           </div>
           <div class="content">
@@ -182,17 +158,17 @@
           </div>
           <div class="field">
             <div class="control">Title
-              <input class="input is-small" type="text" placeholder="e.g My first plant">
+              <input class="input is-small" type="text" placeholder="e.g My first plant" id="postTitle">
             </div>
           </div>
           <br>
           <div class="control">Tell us about your amazing plant!
-            <textarea class="textarea is-small" placeholder="e.g. My fern has been flourishing these past few weeks!"></textarea>
+            <textarea class="textarea is-small" placeholder="e.g. My fern has been flourishing these past few weeks!" id="postBody"></textarea>
           </div>
         </div>
         <div class="field is-grouped is-grouped-centered">
           <p class="control">
-            <a class="button is-primary">
+            <a class="button is-primary" id="postBtn">
               Post Your Plant!
             </a>
           </p>

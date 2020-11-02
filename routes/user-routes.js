@@ -38,7 +38,7 @@ module.exports = (app) => {
         
     })
 
-    app.get("/api/user_data", function(req, res) {
+    app.get("/api/user_data", (req, res) => {
         if (!req.user) {
           res.json({});
         } else {
@@ -50,6 +50,28 @@ module.exports = (app) => {
             id: req.user.id
           });
         }
+      });
+
+      app.post("/api/post", (req,res) => {
+        db.post.create({
+            title: req.body.title,
+            body: req.body.body,
+            userId: req.user.id
+        })
+        .then((data) => {
+            res.json(data)
+        });
+      });
+
+      app.get("/posts", (req,res) => {
+          db.post.findAll({
+              where: {
+                  userId: req.user.id
+              }
+          })
+          .then(data => {
+              res.json(data);
+          })
       });
 
 };

@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
         Post.belongsTo(models.plant, {
             foreignKey: {
-                allowNull: false
+                allowNull: true
             }
         });
 

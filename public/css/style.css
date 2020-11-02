@@ -56,3 +56,12 @@ hr {
   .bio {
       max-width: 425px;
   }
+
+  .full {
+      min-width: 100%;
+  }
+
+  #mainContainer {
+      margin: 0 auto;
+      width: 75%;
+  }
