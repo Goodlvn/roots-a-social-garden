@@ -18,6 +18,7 @@ app.use(passport.session());
 // will need one of these for every routes file that we use
 require("./routes/sign&log-routes.js")(app);
 require("./routes/user-routes.js")(app);
+require("./routes/plantFinder-routes.js")(app);
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {

@@ -3,27 +3,23 @@ $(document).ready(() => {
     renderPost();
 
     $("#postBtn").on("click", event => {
-        
         event.preventDefault();
-        let postBody = $("#postBody").val().trim();
 
+        let postBody = $("#postBody").val().trim();
 
         $.post("/api/post", {
             body: postBody,
         })
             .then(data => {
-                
+
                 renderPost();
-                
+
             })
 
         $("#plantPostModal").removeClass("is-active");
     });
 
-
-
     function renderPost() {
-
         $("#mainContainer").empty();
 
         $.get("/api/user_data", (data) => {
@@ -36,7 +32,7 @@ $(document).ready(() => {
             $.get("/posts", (data) => {
 
 
-                for(i = data.length - 1; i >= 0; i--) {
+                for (i = data.length - 1; i >= 0; i--) {
                     let postNcom = $("<div>");
                     postNcom.attr("class", "full")
 
@@ -65,7 +61,7 @@ $(document).ready(() => {
                     let lineBreak = $("<br>");
 
                     $("#mainContainer").append(postNcom);
-                    
+
                     postNcom.append(postContainer);
                     postContainer.append(profileImg);
                     profileImg.append(imgCont);
@@ -121,7 +117,7 @@ $(document).ready(() => {
                     comControl.append(comText);
 
                     comContainer.append(lineBreakCom);
-                    
+
                     comContainer.append(level);
                     level.append(lvlLeft);
                     lvlLeft.append(lvlItem);
@@ -142,10 +138,8 @@ $(document).ready(() => {
                     postContainer.append(commentTag);
                     $("#mainContainer").append(line);
                 };
-
             });
         });
     };
-
 });
 

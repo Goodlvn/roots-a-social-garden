@@ -35,10 +35,10 @@ module.exports = (app) => {
         })
             .then((data) => {
                 res.json(data)
-            })
+            });
+    });
 
-
-    })
+    
 
     app.get("/api/user_data", (req, res) => {
         if (!req.user) {
