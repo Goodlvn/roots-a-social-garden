@@ -7,4 +7,4 @@ module.exports = (app) => {
     const json = await response.json();
     res.json(json);
   });
-}
+};

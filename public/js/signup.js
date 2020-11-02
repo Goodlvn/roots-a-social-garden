@@ -1,6 +1,4 @@
 // direct to the new profile set up page when user clicks on signup button ========================
-
-
 $(document).ready(() => {
 
     let username = $("#username");
@@ -50,24 +48,19 @@ $(document).ready(() => {
         $("#alert").fadeIn(500);
     };
 
-
     // direct to login page when user clicks on login button ========================
     $("#loginBtn").on("click", function (event) {
         event.preventDefault();
         // redirect to next user profile page
         window.location = "login";
     })
-});
-
-$(document).ready(function() {
 
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
-  
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
-  
     });
-  });
+});
+
 
