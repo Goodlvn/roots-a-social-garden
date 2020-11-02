@@ -31,12 +31,12 @@ hr {
     border: 1px solid black;
 }
 
-.customShow {
+.show {
     display: block;
 }
 
-.customHide {
-    display: none;
+.hide {
+    display: none !important;
 }
 
 .gardenContainer {
@@ -58,6 +58,7 @@ hr {
   }
 
   .full {
+      position: relative;
       min-width: 100%;
   }
 
@@ -65,3 +66,21 @@ hr {
       margin: 0 auto;
       width: 75%;
   }
+
+  .block {
+      display: block;
+  }
+
+  .comment {
+     cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 85px;
+  }
+
+  #commentTag {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+}

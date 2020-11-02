@@ -54,7 +54,6 @@ module.exports = (app) => {
 
       app.post("/api/post", (req,res) => {
         db.post.create({
-            title: req.body.title,
             body: req.body.body,
             userId: req.user.id
         })

@@ -31,6 +31,17 @@ $("#addNewHighlight").on("click", function () {
     $("#newHighlightModal").removeClass("is-active");  
  })
 
+ $("#mainContainer").on("click", ".showCom", (event) => {
+   //  console.log(event.target.parentElement.parentNode.childNodes[1]);
+
+    let comments = event.target.parentElement.parentNode.childNodes[1];
+    comments.classList.toggle("hide");
+
+
+
+
+ })
+
  $(document).ready(function() {
 
    $.get("/api/user_data", (data) => {
