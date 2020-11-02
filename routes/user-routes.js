@@ -38,4 +38,18 @@ module.exports = (app) => {
         
     })
 
+    app.get("/api/user_data", function(req, res) {
+        if (!req.user) {
+          res.json({});
+        } else {
+          res.json({
+            username: req.user.username,
+            first_name: req.user.first_name,
+            last_name: req.user.last_name,
+            bio: req.user.bio,
+            id: req.user.id
+          });
+        }
+      });
+
 };
