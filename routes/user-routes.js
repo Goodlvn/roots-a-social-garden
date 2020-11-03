@@ -5,7 +5,7 @@ module.exports = (app) => {
 
     app.get("/logout", (req, res) => {
 
-        if(req.user.bio === null){
+        if (req.user.bio === null) {
             req.logout();
             res.redirect("/login");
         } else {
@@ -50,6 +50,17 @@ module.exports = (app) => {
         }
     });
 
+    app.get("/api/user_data/:userId", (req, res) => {
+        db.user.findAll({
+            where: {
+                id: req.params.userId
+            }
+        })
+            .then(data => {
+                res.json(data);
+            })
+    });
+
     app.get("/api/post_data", (req, res) => {
         if (!req.user) {
             res.json({});
@@ -82,6 +93,17 @@ module.exports = (app) => {
         })
             .then((data) => {
                 res.json(data)
+            });
+    });
+
+    app.get("/api/comments/:postId", (req, res) => {
+        db.comment.findAll({
+            where: {
+                postId: req.params.postId
+            }
+        })
+            .then(data => {
+                res.json(data);
             });
     });
 

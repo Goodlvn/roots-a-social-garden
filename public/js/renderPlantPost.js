@@ -19,9 +19,9 @@ $(document).ready(() => {
     $("#mainContainer").on("click", ".postComment", event => {
         let postTo = event.target.closest("article");
         let postText = event.target.closest("article").querySelector("textarea");
-        let postid = event.target.closest(".postOrigin").querySelector(".interact").dataset.postid;
+        let postid = event.target.closest(".postOrigin").querySelector(".post").dataset.postid;
 
-        if (postText.value.trim() === ""){
+        if (postText.value.trim() === "") {
             console.log("no dice.");
             return
         } else {
@@ -36,7 +36,7 @@ $(document).ready(() => {
         };
     });
 
-    function renderPost() {
+     function renderPost() {
         $("#mainContainer").empty();
 
         $.get("/api/user_data", (res) => {
@@ -46,13 +46,25 @@ $(document).ready(() => {
             $.get("/posts", (data) => {
 
                 for (i = data.length - 1; i >= 0; i--) {
+                 
                     let postNcom = $("<div>");
-                    postNcom.attr("class", "full postOrigin")
+                    postNcom.attr("class", "full postOrigin");
                     $("#mainContainer").append(postNcom);
 
                     createPost(postNcom, data[i].body, fullName, uHandle, data[i].id);
-
                     addCommentBox(postNcom);
+
+                    $.get("/api/comments/" + data[i].id, info => {
+
+                       let addComment = postNcom.children("article.commentBox")[0];
+                
+                        info.forEach(comment => {
+                            $.get("api/user_data/" + comment.userId, cashe => {
+                                persistComments(cashe[0].first_name, cashe[0].last_name, cashe[0].username, addComment, comment.text);
+                            });
+                
+                        });  
+                    });
                 };
             });
         });
@@ -60,7 +72,7 @@ $(document).ready(() => {
 
     function createPost(appendMe, iterateMe, name, handle, postTag) {
         let postContainer = $("<article>");
-        postContainer.attr("class", "media full p-4 interact");
+        postContainer.attr("class", "media full p-4 post");
         postContainer.attr("data-postid", postTag);
 
         let profileImg = $("<figure>");
@@ -119,7 +131,7 @@ $(document).ready(() => {
 
     function addCommentBox(appendMe) {
         let comContainer = $("<article>");
-        comContainer.attr("class", "media full mt-4 pb-4 hide");
+        comContainer.attr("class", "media full mt-4 pb-4 hide commentBox commentFunc");
         let profileImgCom = $("<figure>");
         profileImgCom.attr("class", "media-left");
         let imgContCom = $("<p>");
@@ -172,7 +184,7 @@ $(document).ready(() => {
         $.get("/api/user_data", data => {
 
             let postContainer = $("<article>");
-            postContainer.attr("class", "media full p-4 interact");
+            postContainer.attr("class", "media full p-4 commentFunc");
 
             let profileImg = $("<figure>");
             profileImg.attr("class", "media-left");
@@ -212,6 +224,50 @@ $(document).ready(() => {
             content.prepend(userHandle);
             content.prepend(userName);
         });
+    };
+
+    function persistComments(firstName, lastName, username, appendMe, commentCreate) {
+
+        let postContainer = $("<article>");
+        postContainer.attr("class", "media full p-4 hide commentFunc");
+
+        let profileImg = $("<figure>");
+        profileImg.attr("class", "media-left");
+
+        let imgCont = $("<p>");
+        imgCont.attr("class", "image is-64x64");
+
+        let img = $("<img>");
+        img.attr("src", "../images/profilePlant.jpg");
+
+        let postContent = $("<div>");
+        postContent.attr("class", "media-content");
+
+        let contentWrapper = $("<div>");
+        contentWrapper.attr("class", "content");
+
+        let content = $("<p>");
+        content.text(commentCreate);
+        content.attr("class", "pb-3")
+
+        let userName = $("<strong>");
+        userName.text(firstName + " " + lastName + " ");
+
+        let userHandle = $("<small>");
+        userHandle.text("@" + username);
+
+        let lineBreak = $("<br>");
+
+        postContainer.insertBefore(appendMe);
+        postContainer.append(profileImg);
+        profileImg.append(imgCont);
+        imgCont.append(img);
+        postContainer.append(postContent);
+        postContent.append(contentWrapper);
+        contentWrapper.append(content);
+        content.prepend(lineBreak);
+        content.prepend(userHandle);
+        content.prepend(userName);
     };
 });
 

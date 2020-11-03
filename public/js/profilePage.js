@@ -30,8 +30,12 @@ $(document).ready(function () {
     });
    
     $("#mainContainer").on("click", ".showCom", (event) => {
-       let comments = event.target.parentElement.parentNode.childNodes[1];
-       comments.classList.toggle("hide");
+       let comments = event.target.closest(".postOrigin");
+       let commentsNodeList = comments.querySelectorAll(".commentFunc");
+       let postColor = comments.querySelector(".post");
+
+       commentsNodeList.forEach(com => com.classList.toggle("hide"));
+       postColor.classList.toggle("has-background-success-light");
     });
    
     $("#getStartedCloseBtn").on("click", (data) => {
