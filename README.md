@@ -11,7 +11,11 @@
 [![Generic badge](https://img.shields.io/badge/Hard_Dependancy-bcryptjs-red.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Hard_Dependancy-node_fetch-red.svg)](https://shields.io/)
 
-![Image](roots.png)
+<br>
+
+![Image](roots.PNG)
+
+<br>
 
 ## Description
 
@@ -28,6 +32,18 @@ Our goal is to create a community where people can share and talk about the prog
 of their plants and to be able to look up any interesting facts about specific plants.
 
 <br>
+Here is a demo of our app:
+
+![alttext](rootsdemo2.gif)
+
+Our plant modals in action:
+
+![alttext](modal.gif)
+
+Our Roots application is responsive for multiple screen sizes:
+
+![alttext](responsive.gif)
+
 
 ## User Story
 ```
