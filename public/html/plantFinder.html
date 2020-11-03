@@ -24,22 +24,22 @@
         </span>
       </div>
 
-   <!-- Profile search on nav bar (Need to update search button) -->
-          <div class="field has-addons mt-4 ml-5">
-          <div class="control has-icons-left mt-4">
-            <input class="input" type="text" placeholder="Find a friend"></i>
-            <span class="icon is-small is-left">
-              <i class="far fa-user"></i>
-            </span>
-          </div>
-          <a class="button is-success is-inverted mt-4" id="searchBtn">
-            <span class="icon">
-              <i class="fas fa-search"></i>
-            </span>
-            <span>Search</span>
-          </a>
+      <!-- Profile search on nav bar (Need to update search button) -->
+      <div class="field has-addons mt-4 ml-5">
+        <div class="control has-icons-left m-4">
+          <input class="input" type="text" placeholder="Find a friend"></i>
+          <span class="icon is-small is-left">
+            <i class="far fa-user"></i>
+          </span>
+        </div>
+        <a class="button is-success is-inverted mt-4" id="searchBtn">
+          <span class="icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span>Search</span>
+        </a>
       </div>
-  
+
 
       <div id="navbarMenuHeroC" class="navbar-menu">
         <div class="navbar-end">
@@ -72,60 +72,63 @@
   <section class="section container hero-body is-max-desktop">
     <!-- <div class="columns is-4 is-mobile"> -->
 
-      <div class="column is-one-third mx-5">
-        <div class="field has-addons">
-            <div class="control">
-              <input class="input" type="text" id="searchPlant" placeholder="Find a plant">
-            </div>
-            <div class="control">
-              <a class="button is-info" id="plantFinderBtn">
-                  <span class="icon">
-                <i class="fas fa-search"></i>
-              </span>
-               <span>Search</span> 
-              </a>
-            </div>
-          </div>
-      </div>
-
-      <div class="card">
-
-        <div class="row">
-          <div id="modal">
-              Sorry we couldn't find results matching your search. Please check your spelling or try searching another plant.
-          </div>
-          
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img id="cardImage">
-          </figure>
+    <div class="column is-one-third mx-5">
+      <div class="field has-addons">
+        <div class="control has-icons-left">
+          <input class="input" type="text" id="searchPlant" placeholder="Find a plant"></i>
+          <span class="icon is-small is-left">
+            <i class="far fa-user"></i>
+          </span>
         </div>
+        <div class="control">
+          <a class="button is-success is-inverted ml-3" id="plantFinderBtn">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+            <span>Search</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
+    <div class="card">
 
+      <div class="row">
+        <div id="modal" style="color: black;">
+          Sorry we couldn't find results matching your search. Please check your spelling or try searching another
+          plant.
+        </div>
 
         <div class="col s12 m4 l2"></div>
         <div class="col s12 m4 l8"></div>
         <div class="row">
-            <div class="col s12 m6 centerS">
-                <div class="centerS card large horizontal">
-                    <div class="card-image">
-                        <img id="cardImage">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h4 class="header bottom" id="plantName">Plant Search</h4>
-                            <p id="instructions">Search a plant to recieve more information!</p>
-                                <h5 id="familyName"></h5>
-                                <h5 id="scientificName"></h5>
-                            <ul id="information"></ul>
-                        </div>
-                    </div>
+          <div class="col s12 m6 centerS">
+            <div class="centerS card large horizontal">
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h4 class="header bottom" id="plantName">Plant Search</h4>
+                  <p id="instructions">Search a plant to recieve more information!</p>
+                  <h5 id="familyName"></h5>
+                  <h5 id="scientificName"></h5>
+                  <ul id="information"></ul>
                 </div>
+              </div>
+              <div class="card-image">
+                <img id="cardImage">
+              </div>
+
             </div>
-           
-        <div class="col s12 m4 l2"></div>
+          </div>
+
+          <!-- <div class="card-image">
+            <figure class="image is-4by3">
+              <img id="cardImage">
+            </figure>
+          </div> -->
+
+          <div class="col s12 m4 l2"></div>
         </div>
-    </div> 
+      </div>
 
 
 
