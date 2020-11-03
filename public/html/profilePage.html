@@ -86,31 +86,37 @@
       </div>
     </div>
 
+
     <div class="columns hero-body is-centered is-half is-offset-one-quarter is-mobile">
       <!-- <div class="column is-half is-offset-one-quarter"> -->
       <figure class="image is-64x64 mx-3">
         <img class="highlightimg is-rounded is-centered image is-64x64"
-          src="https://www.terraceranch.com/wp-content/uploads/2019/05/33249180981e829bdea1ef3e5a0b8b55.jpg">
+          src="https://www.terraceranch.com/wp-content/uploads/2019/05/33249180981e829bdea1ef3e5a0b8b55.jpg"
+          id="plant1">
       </figure>
 
       <figure class="image is-64x64 mx-3">
         <img class="highlightimg is-rounded is-centered image is-64x64"
-          src="https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2014/6/25/0/CI_04-fbfd01d70004.jpg.rend.hgtvcom.966.725.suffix/1452664590074.jpeg">
+          src="https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2014/6/25/0/CI_04-fbfd01d70004.jpg.rend.hgtvcom.966.725.suffix/1452664590074.jpeg"
+          id="plant2">
       </figure>
 
       <figure class="image is-64x64 mx-3">
         <img class="highlightimg is-rounded is-centered image is-64x64"
-          src="https://images.homedepot-static.com/productImages/eb357360-4c68-4170-b906-0a331c5dfcd3/svn/pure-beauty-farms-house-plants-dc10ficlyra-64_600.jpg">
+          src="https://images.homedepot-static.com/productImages/eb357360-4c68-4170-b906-0a331c5dfcd3/svn/pure-beauty-farms-house-plants-dc10ficlyra-64_600.jpg"
+          id="plant3">
       </figure>
 
       <figure class="image is-64x64 mx-3">
         <img class="highlightimg is-rounded is-centered image is-64x64"
-          src="https://i.guim.co.uk/img/media/d288db25d20eb75d8b2d20d60ad68259a0ab76cd/34_1059_3832_4789/master/3832.jpg?width=300&quality=85&auto=format&fit=max&s=cd59f50f3e483440cf6986dd7a53958d">
+          src="https://i.guim.co.uk/img/media/d288db25d20eb75d8b2d20d60ad68259a0ab76cd/34_1059_3832_4789/master/3832.jpg?width=300&quality=85&auto=format&fit=max&s=cd59f50f3e483440cf6986dd7a53958d"
+          id="plant4">
       </figure>
 
       <figure class="image is-64x64 mx-3">
         <img class="highlightimg is-rounded is-centered image is-64x64"
-          src="https://vignette.wikia.nocookie.net/biggest/images/c/cd/Greenz12.jpg/revision/latest?cb=20160213170858">
+          src="https://vignette.wikia.nocookie.net/biggest/images/c/cd/Greenz12.jpg/revision/latest?cb=20160213170858"
+          id="plant5">
       </figure>
       <!-- button to create new highlight -->
       <a class>
@@ -121,7 +127,6 @@
       </figure>
       </a>
     </div>
-
 
     <section>
       <div class="has-text-centered">
@@ -223,26 +228,26 @@
           </div>
           <div class="field">
             <div class="control">Name of your plant:
-              <input class="input is-small" type="text" placeholder="e.g Fernando the Fern">
+              <input class="input is-small" type="text" placeholder="e.g Fernando the Fern" id="nameBody">
             </div>
           </div>
           <br>
           <div class="field">
             <div class="control">Age of your plant:
-              <input class="input is-small" type="text" placeholder="e.g 2 weeks old">
+              <input class="input is-small" type="text" placeholder="e.g 2 weeks old" id="ageBody">
             </div>
           </div>
           <br>
           <div class="field">
             <div class="control">Plant Bio:
               <input class="input is-small" type="text"
-                placeholder="e.g Fernando the Fern is my favorite plant baby. He loves water & sun...">
+                placeholder="e.g Fernando the Fern is my favorite plant baby. He loves water & sun..." id="bioBody">
             </div>
           </div>
           <br>
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <a class="button is-primary">
+              <a class="button is-primary" id=postHighlight>
                 Add New Highlight!
               </a>
             </p>
@@ -252,9 +257,90 @@
     </div>
     <button class="modal-close is-large" aria-label="close" id="close"></button>
   </div>
+
+  <!-- modal for 1st circle in garden -->
+  <div class="modal" id="plant1Modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <img src="https://www.terraceranch.com/wp-content/uploads/2019/05/33249180981e829bdea1ef3e5a0b8b55.jpg" alt="">
+      </p>
+      <section class="modal-card-body has-text-centered">
+        Meet Grace.
+        3 years old.
+        She's a beautiful green dragon plant.
+      </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- modal for 2nd circle in garden -->
+  <div class="modal" id="plant2Modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <img src="https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2014/6/25/0/CI_04-fbfd01d70004.jpg.rend.hgtvcom.966.725.suffix/1452664590074.jpeg" alt="">
+      </p>
+      <section class="modal-card-body has-text-centered">
+        Meet Henry.
+        5 months old.
+        He's flourishing beautifully.
+      </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- modal for 3rd circle in garden -->
+  <div class="modal" id="plant3Modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <img src="https://images.homedepot-static.com/productImages/eb357360-4c68-4170-b906-0a331c5dfcd3/svn/pure-beauty-farms-house-plants-dc10ficlyra-64_600.jpg" alt="">
+      </p>
+      <section class="modal-card-body has-text-centered">
+        Meet Henry.
+        5 months old.
+        He's flourishing beautifully.
+      </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- modal for 4th circle in garden -->
+  <div class="modal" id="plant4Modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <img src="https://i.guim.co.uk/img/media/d288db25d20eb75d8b2d20d60ad68259a0ab76cd/34_1059_3832_4789/master/3832.jpg?width=300&quality=85&auto=format&fit=max&s=cd59f50f3e483440cf6986dd7a53958d" alt="">
+      </p>
+      <section class="modal-card-body has-text-centered">
+        Meet Francis.
+        6 months old.
+        She likes hanging out in the living room.
+      </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- modal for 5th circle in modal -->
+  <div class="modal" id="plant5Modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <img src="https://vignette.wikia.nocookie.net/biggest/images/c/cd/Greenz12.jpg/revision/latest?cb=20160213170858" alt="">
+      </p>
+      <section class="modal-card-body has-text-centered">
+        Meet Charlie.
+        5 years old.
+        He stands tall at our office and everyone loves him.
+      </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
-    <div class="content has-text-centered">
+    <section class="modal-card-body has-text-centered">
       <i class="fas fa-seedling"></i>
       <strong>Roots ©Copyright 2020</strong>
     </div>
