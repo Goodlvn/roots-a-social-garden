@@ -74,11 +74,14 @@
 
     <div class="column is-one-third mx-5">
       <div class="field has-addons">
-        <div class="control">
-          <input class="input" type="text" id="searchPlant" placeholder="Find a plant">
+        <div class="control has-icons-left">
+          <input class="input" type="text" id="searchPlant" placeholder="Find a plant"></i>
+          <span class="icon is-small is-left">
+            <i class="far fa-user"></i>
+          </span>
         </div>
         <div class="control">
-          <a class="button is-info" id="plantFinderBtn">
+          <a class="button is-success is-inverted ml-3" id="plantFinderBtn">
             <span class="icon">
               <i class="fas fa-search"></i>
             </span>
@@ -91,27 +94,16 @@
     <div class="card">
 
       <div class="row">
-        <div id="modal">
+        <div id="modal" style="color: black;">
           Sorry we couldn't find results matching your search. Please check your spelling or try searching another
           plant.
         </div>
-
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img id="cardImage">
-          </figure>
-        </div>
-
-
 
         <div class="col s12 m4 l2"></div>
         <div class="col s12 m4 l8"></div>
         <div class="row">
           <div class="col s12 m6 centerS">
             <div class="centerS card large horizontal">
-              <div class="card-image">
-                <img id="cardImage">
-              </div>
               <div class="card-stacked">
                 <div class="card-content">
                   <h4 class="header bottom" id="plantName">Plant Search</h4>
@@ -121,8 +113,18 @@
                   <ul id="information"></ul>
                 </div>
               </div>
+              <div class="card-image">
+                <img id="cardImage">
+              </div>
+
             </div>
           </div>
+
+          <!-- <div class="card-image">
+            <figure class="image is-4by3">
+              <img id="cardImage">
+            </figure>
+          </div> -->
 
           <div class="col s12 m4 l2"></div>
         </div>
