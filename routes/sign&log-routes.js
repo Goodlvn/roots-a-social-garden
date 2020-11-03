@@ -7,10 +7,6 @@ const isProfileConfirmed = require("../config/middleware/isProfileConfirmed");
 
 module.exports = (app) => {
 
-    app.post("/api/login", passport.authenticate("local"), (req, res) => {
-        res.json(req.user);
-    });
-
     app.post("/api/signup", (req, res) => {
         db.user.create({
             username: req.body.username,
@@ -24,21 +20,23 @@ module.exports = (app) => {
         });
     });
 
-    app.get("/", (req, res) => {
-        
-        if(req.user) {
-                res.redirect("/members");
-        }
-
-        res.sendFile(path.join(__dirname, "../public/html/signup.html"));
-
-    });
-
     app.get("/login", (req,res) => {
         if(req.user) {
             res.redirect("/members");
         }
         res.sendFile(path.join(__dirname, "../public/html/login.html"));
+    });
+
+    app.post("/api/login", passport.authenticate("local"), (req, res) => {
+        res.json(req.user);
+    });
+
+    app.get("/", (req, res) => {
+        if(req.user) {
+                res.redirect("/members");
+        }
+
+        res.sendFile(path.join(__dirname, "../public/html/signup.html"));
     });
 
     app.get("/members", isAuthenticated, isProfileConfirmed, (req, res) => {
