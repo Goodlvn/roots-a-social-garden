@@ -5,7 +5,7 @@ module.exports = (app) => {
 
     app.get("/logout", (req, res) => {
 
-        if(req.user.bio === null){
+        if (req.user.bio === null) {
             req.logout();
             res.redirect("/login");
         } else {
@@ -18,8 +18,6 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, "../public/html/profileConfirm.html"));
 
     });
-
-
 
     app.put("/api/createprofile", (req, res) => {
 
@@ -38,9 +36,32 @@ module.exports = (app) => {
             });
     });
 
-    
-
     app.get("/api/user_data", (req, res) => {
+        if (!req.user) {
+            res.json({});
+        } else {
+            res.json({
+                username: req.user.username,
+                first_name: req.user.first_name,
+                last_name: req.user.last_name,
+                bio: req.user.bio,
+                id: req.user.id
+            });
+        }
+    });
+
+    app.get("/api/user_data/:userId", (req, res) => {
+        db.user.findAll({
+            where: {
+                id: req.params.userId
+            }
+        })
+            .then(data => {
+                res.json(data);
+            })
+    });
+
+    app.get("/api/post_data", (req, res) => {
         if (!req.user) {
             res.json({});
         } else {
@@ -60,8 +81,29 @@ module.exports = (app) => {
             userId: req.user.id
         })
             .then((data) => {
-                console.log("TEST");
                 res.json(data)
+            });
+    });
+
+    app.post("/api/comment", (req, res) => {
+        db.comment.create({
+            text: req.body.text,
+            userId: req.user.id,
+            postId: req.body.postId
+        })
+            .then((data) => {
+                res.json(data)
+            });
+    });
+
+    app.get("/api/comments/:postId", (req, res) => {
+        db.comment.findAll({
+            where: {
+                postId: req.params.postId
+            }
+        })
+            .then(data => {
+                res.json(data);
             });
     });
 

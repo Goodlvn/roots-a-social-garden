@@ -4,8 +4,6 @@
     background-repeat:  no-repeat;
     background-size:  cover;
     background-color: #999;
-
-
 }
 
 .create {
@@ -39,12 +37,6 @@ hr {
     display: none !important;
 }
 
-.gardenContainer {
-    width: 100%;
-    min-height: 250px;
-
-}
-
 #createBtn {
     display: block;
     margin-left: auto;
@@ -65,6 +57,7 @@ hr {
   #mainContainer {
       margin: 0 auto;
       width: 75%;
+      min-height: 250px;
   }
 
   .block {
@@ -89,3 +82,11 @@ hr {
       font-family: 'Abel', sans-serif;
       font-family: 'Kanit', sans-serif;
   }
+
+  .showCom {
+      cursor: pointer;
+  }
+
+.currentComment {
+    border: solid rgb(144, 206, 144) 3px;
+}
