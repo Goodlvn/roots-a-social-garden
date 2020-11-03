@@ -19,8 +19,6 @@ module.exports = (app) => {
 
     });
 
-
-
     app.put("/api/createprofile", (req, res) => {
 
         db.user.update({
@@ -38,9 +36,21 @@ module.exports = (app) => {
             });
     });
 
-    
-
     app.get("/api/user_data", (req, res) => {
+        if (!req.user) {
+            res.json({});
+        } else {
+            res.json({
+                username: req.user.username,
+                first_name: req.user.first_name,
+                last_name: req.user.last_name,
+                bio: req.user.bio,
+                id: req.user.id
+            });
+        }
+    });
+
+    app.get("/api/post_data", (req, res) => {
         if (!req.user) {
             res.json({});
         } else {
@@ -60,7 +70,17 @@ module.exports = (app) => {
             userId: req.user.id
         })
             .then((data) => {
-                console.log("TEST");
+                res.json(data)
+            });
+    });
+
+    app.post("/api/comment", (req, res) => {
+        db.comment.create({
+            text: req.body.text,
+            userId: req.user.id,
+            postId: req.body.postId
+        })
+            .then((data) => {
                 res.json(data)
             });
     });

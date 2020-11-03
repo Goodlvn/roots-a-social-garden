@@ -22,5 +22,4 @@ $.get("/api/plant_data/" + plantSearch, (response) => {
   $("#scientificName").text("Scientific Name: " + scientificName);
 } );
 
-
-})
+});
