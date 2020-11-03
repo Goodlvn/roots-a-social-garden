@@ -34,7 +34,7 @@ $(document).ready(() => {
             }
           })
             .then((data) => {
-                // window.location.replace("/login");
+                window.location.replace("/logout");
             })
             .catch(handleLoginErr);
     };
