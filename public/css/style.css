@@ -86,3 +86,7 @@ hr {
   .showCom {
       cursor: pointer;
   }
+
+.currentComment {
+    border: solid rgb(144, 206, 144) 3px;
+}
