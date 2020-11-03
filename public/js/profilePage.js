@@ -84,7 +84,6 @@ $(document).ready(function () {
 
    // direct to new highlight modal when user clicks on + button ========================
    $("#addNewHighlight").on("click", function () {
-<<<<<<< HEAD
        $("#newHighlightModal").addClass("is-active");
     });
    
@@ -106,25 +105,6 @@ $(document).ready(function () {
     });
    
     $("#getStartedCloseBtn").on("click", (data) => {
-=======
-      $("#newHighlightModal").addClass("is-active");
-   });
-
-   $("#newHighlightModal").on("click", "#close", function () {
-      $("#newHighlightModal").removeClass("is-active");
-   });
-
-   $("#newHighlightModal").on("click", ".modal-background", function () {
-      $("#newHighlightModal").removeClass("is-active");
-   });
-
-   $("#mainContainer").on("click", ".showCom", (event) => {
-      let comments = event.target.parentElement.parentNode.childNodes[1];
-      comments.classList.toggle("hide");
-   });
-
-   $("#getStartedCloseBtn").on("click", (data) => {
->>>>>>> 1b55440174d92e7a21b8844093e864d99e90ff76
       $("#getStarted").addClass("hide");
    });
 
