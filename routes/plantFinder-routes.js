@@ -4,8 +4,14 @@ const path = require("path");
 module.exports = (app) => {
 
   app.get("/plantFinder", (req,res) => {
+
+    if(req.user){
+      res.sendFile(path.join(__dirname, "../public/html/plantFinder.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/html/plantFinderGuest.html"));
+    }
   
-    res.sendFile(path.join(__dirname, "../public/html/plantFinder.html"));
+    
 
 });
 
