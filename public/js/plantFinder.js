@@ -20,7 +20,6 @@ $.get("/api/plant_data/" + plantSearch, (response) => {
   $("#plantName").text("Plant Name: " + plantName);
   $("#familyName").text("Family Common Name: " + familyName);
   $("#scientificName").text("Scientific Name: " + scientificName);
-
 } );
 
 
